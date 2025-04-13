@@ -13,3 +13,4 @@ D:\EcommerceApp\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
 D:\EcommerceApp\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
 D:\EcommerceApp\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 D:\EcommerceApp\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+D:\EcommerceApp\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
