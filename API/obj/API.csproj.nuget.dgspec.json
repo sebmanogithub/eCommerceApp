@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EcommerceApp\\api\\API.csproj": {}
+    "D:\\EcommerceApp\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\EcommerceApp\\api\\API.csproj": {
+    "D:\\EcommerceApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EcommerceApp\\api\\API.csproj",
+        "projectUniqueName": "D:\\EcommerceApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\EcommerceApp\\api\\API.csproj",
+        "projectPath": "D:\\EcommerceApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
-        "outputPath": "D:\\EcommerceApp\\api\\obj\\",
+        "outputPath": "D:\\EcommerceApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,6 +46,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -169,6 +175,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
