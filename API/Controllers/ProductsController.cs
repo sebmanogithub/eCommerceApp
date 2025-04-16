@@ -12,9 +12,9 @@ namespace API.Controllers
     public class ProductsController(IProductRepository _productRepository) : ControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts()
+        public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(string? brand, string? type)
         {
-            return Ok(await _productRepository.GetProductsAsync());
+            return Ok(await _productRepository.GetProductsAsync(brand, type));
         }
 
         [HttpGet("{id:int}")]
@@ -60,11 +60,6 @@ namespace API.Controllers
             return BadRequest("Problem updating the product");
         }
 
-        private bool ProductExist(int id)
-        {
-            return _productRepository.ProductExists(id);
-        }
-
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteProduct(int id)
         {
@@ -84,5 +79,22 @@ namespace API.Controllers
 
             return BadRequest("Problem deleting the product");
         }
-    }
+
+        [HttpGet("brands")]
+        public async Task<ActionResult<IReadOnlyList<string>>> GetBrands()
+        {
+            return Ok(await _productRepository.GetBrandsAsync());
+        }
+
+        [HttpGet("types")]
+        public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
+        {
+            return Ok(await _productRepository.GetTypesAsync());
+        }
+
+        private bool ProductExist(int id)
+        {
+            return _productRepository.ProductExists(id);
+        }
+   }
 }
